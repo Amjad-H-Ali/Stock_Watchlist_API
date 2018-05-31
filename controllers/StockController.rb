@@ -27,6 +27,23 @@ class StockController < ApplicationController
 			stocks: user_watchlist
 		}.to_json
 
+	end
+
+	# Add stock to user watchlist
+	post '/:ticker' do
+		user = User.find(session[:user_id])
+
+		new_stock = user.stocks.create ticker:params[:ticker]
+
+		{
+			success: true,
+
+			message: "Added new stock #{params[:ticker]} to watchlist.",
+
+			stock: new_stock[:ticker]
+		}.to_json
+
+
 	end	
 
 
