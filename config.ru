@@ -19,10 +19,10 @@ map('/') {
 	run ApplicationController
 }
 
-# map('/user') {
-# 	run UserController
-# }
+map('/user') {
+	run UserController
+}
 
-# map('/stock') {
-# 	run StockController
-# }
+map('/stock') {
+	run StockController
+}

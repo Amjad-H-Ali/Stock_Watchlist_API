@@ -10,7 +10,7 @@ CREATE TABLE users (
 
 	email VARCHAR(256) UNIQUE,
 
-	password VARCHAR(256)
+	password_digest VARCHAR(256)
 
 );
 
