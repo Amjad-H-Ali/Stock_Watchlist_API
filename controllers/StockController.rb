@@ -40,11 +40,25 @@ class StockController < ApplicationController
 
 			message: "Added new stock #{params[:ticker]} to watchlist.",
 
-			stock: new_stock[:ticker]
+			added_stock: new_stock[:ticker]
 		}.to_json
 
 
 	end	
+
+	# Delete stock from user watchlist 
+
+	delete '/:id' do
+		stock = Stock.find(params[:id])
+
+		stock.destroy
+
+		{
+			success: true,
+
+			message: "Deleted #{stock[:ticker]} from watchlist."
+		}.to_json
+	end
 
 
 
