@@ -48,8 +48,8 @@ class StockController < ApplicationController
 
 	# Delete stock from user watchlist 
 
-	delete '/:id' do
-		stock = Stock.find(params[:id])
+	delete '/:ticker' do
+		stock = Stock.find_by :ticker => params[:ticker]
 
 		stock.destroy
 
