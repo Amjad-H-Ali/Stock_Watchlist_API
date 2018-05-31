@@ -1,0 +1,4 @@
+class StockController < ApplicationController 
+
+
+end	
