@@ -30,8 +30,42 @@ class UserController < ApplicationController
 				message: 'Email already used.'
 			}.to_json
 		end
-				
 	end
+
+	# Login Route
+
+	post '/login' do
+		email = @payload[:email]
+
+		password = @payload[:password]
+
+		user = User.find_by :email => email
+
+		if user && user.authenticate(password)
+
+			session[:logged_in] = true
+
+			session[:user_id] = user.id
+
+			{
+				success: true,
+
+				message: "Logged in with email #{user[:email]}."
+			}.to_json
+		else
+			
+			{
+				success: false,
+
+				message: 'Invalid Credentials.'
+			}.to_json
+		end
+				
+	end	
+				
+
+
+
 	
 
 
