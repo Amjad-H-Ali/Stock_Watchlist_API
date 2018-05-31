@@ -61,12 +61,22 @@ class UserController < ApplicationController
 			}.to_json
 		end
 				
-	end	
+	end
+
+
+	# Logout Route
+
+	post '/logout' do
+
+		session.destroy
+
+		{
+			success: true,
+
+			message: "Logged out."
+		}.to_json
+
+	end
+
 				
-
-
-
-	
-
-
 end	
