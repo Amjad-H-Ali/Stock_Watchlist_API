@@ -20,7 +20,7 @@ class UserController < ApplicationController
 			{
 				success: true,
 
-				message: "Logged in with email #{user[:email]}."
+				message: "Logged in as #{user[:email]}."
 			}.to_json
 		else
 			
@@ -50,7 +50,7 @@ class UserController < ApplicationController
 			{
 				success: true,
 
-				message: "Logged in with email #{user[:email]}."
+				message: "Logged in as email #{user[:email]}."
 			}.to_json
 		else
 			
