@@ -27,7 +27,7 @@ class UserController < ApplicationController
 			{
 				success: false,
 
-				message: 'Email already used.'
+				message: 'Email already in use.'
 			}.to_json
 		end
 	end
