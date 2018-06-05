@@ -2,13 +2,15 @@ class ApplicationController < Sinatra::Base
 	require 'bundler'
 	Bundler.require()
 
+	require './config/environments'
 
 
-	# Connection to DB
-	ActiveRecord::Base.establish_connection(
-		:adapter => 'postgresql',
-		:database => 'stock_watchlist_app'
-	)
+
+	# # Connection to DB
+	# ActiveRecord::Base.establish_connection(
+	# 	:adapter => 'postgresql',
+	# 	:database => 'stock_watchlist_app'
+	# )
 
 	# Allows requests to be made across different servers
 
