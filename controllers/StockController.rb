@@ -49,7 +49,7 @@ class StockController < ApplicationController
 	# Delete stock from user watchlist 
 
 	delete '/:ticker' do
-		stock = Stock.find_by :ticker => params[:ticker]
+		stock = Stock.find_by(:ticker => params[:ticker], :user_id => session[:user_id])
 
 		stock.destroy
 
