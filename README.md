@@ -56,7 +56,7 @@ See corresponding REACT app info at https://github.com/Amjad-H-Ali/Stock_Watchli
 	
 	_`POST`_	
 
-* ### DETAILS:	 	
+* #### DETAILS:	 	
 
     - Takes in a username and password.
     - Checks if given username and password match in the DB.
@@ -87,7 +87,7 @@ See corresponding REACT app info at https://github.com/Amjad-H-Ali/Stock_Watchli
 	
 	_`POST`_
 
-* ### DETAILS:
+* #### DETAILS:
 
 	- Destroys the session, effectively ‘logging the user out’	
 
